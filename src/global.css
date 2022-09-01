@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
+@layer utilities {
+  .min-inline-size-1\/2 {
+    min-inline-size: 50%;
+  }
+
+  .text-indent-full {
+    text-indent: 100%;
+  }
+}
