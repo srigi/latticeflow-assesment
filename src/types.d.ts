@@ -14,3 +14,10 @@ export type NextPageWithLayout<P = unknown> = NextPage<P> & {
 export interface AppProps extends NextAppProps {
   Component: NextPageWithLayout;
 }
+
+export interface Item {
+  id: string;
+  color: "blue" | "green" | "orange";
+  size: "small" | "large";
+  dot: boolean;
+}
