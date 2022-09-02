@@ -1,19 +1,31 @@
 import clsx from "clsx";
 import { FunctionComponent } from "react";
-import { Item } from "src/types";
+import { Item as ItemType } from "src/types";
 
-const Item: FunctionComponent<Pick<Item, "color" | "dot" | "size">> = ({
+interface Props extends ItemType {
+  notifyClicked: (id: string) => void;
+  isSelected: boolean;
+}
+
+const Item: FunctionComponent<Props> = ({
   color,
   dot,
+  id,
+  isSelected,
+  notifyClicked,
   size,
 }) => {
+  const onClick = () => {
+    notifyClicked(id);
+  };
   return (
     <article
       className={clsx(
+        { "opacity-40": !isSelected },
         "bg-gray-100 cursor-pointer hover:border hover:border-gray-400",
-        "flex w-[128px] h-[128px] items-center justify-center",
-        "opacity-40"
+        "flex w-[128px] h-[128px] items-center justify-center"
       )}
+      onClick={onClick}
     >
       <div
         className={clsx(
