@@ -2,14 +2,11 @@ import { useAtom } from "jotai";
 import { FunctionComponent } from "react";
 
 import Item from "src/components/Item";
-import { Item as ItemType } from "src/types";
+import dataset from "src/atoms/dataset";
 import selection from "src/atoms/selection";
 
-interface Props {
-  items: Array<ItemType>;
-}
-
-const Grid: FunctionComponent<Props> = ({ items }) => {
+const Grid: FunctionComponent = () => {
+  const [items] = useAtom(dataset);
   const [selected, setSelected] = useAtom(selection);
 
   const onItemClick = (id: string) => {
