@@ -38,7 +38,7 @@
   {
     "id": "",
     "color": "blue",
-    "size": "large",
+    "size": "small",
     "dot": true
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "f5c94ea5",
     "color": "orange",
-    "size": "large",
+    "size": "small",
     "dot": true
   },
   {
@@ -81,7 +81,7 @@
     "id": "cd108274",
     "color": "green",
     "size": "large",
-    "dot": true
+    "dot": false
   },
   {
     "id": "d0529d2d",
@@ -111,7 +111,7 @@
     "id": "6948d237",
     "color": "orange",
     "size": "large",
-    "dot": true
+    "dot": false
   },
   {
     "id": "4d6b1516",
