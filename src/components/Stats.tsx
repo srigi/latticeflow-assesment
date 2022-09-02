@@ -32,20 +32,20 @@ const Stats: FunctionComponent<Props> = ({ target, targetPercentage }) => {
   return (
     <div className="mb-4 flex-1 max-w-sm">
       <h3 className="mb-6 ml-4">
-        <strong>{target}</strong>{" "}
-        <span className="text-indigo-500">target</span>: {targetPercentage}%
+        <strong>{target}</strong> target:{" "}
+        <strong className="text-orange-700">{targetPercentage}%</strong>
       </h3>
 
       <div className="relative">
         <div
-          className="absolute bg-gray-700 h-4 w-1 -top-4"
+          className="absolute bg-orange-700 h-4 w-1 -top-4"
           style={{
             left: `${targetPercentage}%`,
           }}
         />
         <div className="bg-gray-700 h-1 -mr-1" />
         <div
-          className="absolute bg-indigo-500 h-4 w-1 top-1"
+          className="absolute bg-indigo-600 h-4 w-1 top-1"
           style={{
             left: `${selectedPercentage}%`,
           }}
@@ -54,7 +54,8 @@ const Stats: FunctionComponent<Props> = ({ target, targetPercentage }) => {
 
       <div className="mt-4">
         <p>
-          actual: <strong>{selectedPercentage}%</strong>
+          actual:{" "}
+          <strong className="text-indigo-600">{selectedPercentage}%</strong>
         </p>
         <p>
           difference:{" "}
